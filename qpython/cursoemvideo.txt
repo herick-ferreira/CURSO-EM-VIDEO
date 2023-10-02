@@ -1,0 +1,7 @@
+Gustavo;41
+Ana;27
+Pedro;35
+Paulo;95
+José;55
+João;48
+Herick;24
