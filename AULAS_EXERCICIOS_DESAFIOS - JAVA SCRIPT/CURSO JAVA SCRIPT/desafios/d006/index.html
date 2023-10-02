@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 6</title>
+    <style>
+        body {
+            background-color: #B7CF9D;
+        }
+        button {
+            color: white;
+            background-color: grey;
+            padding: 20px;
+            font-family: Arial;
+            border-bottom: black;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        h1 {
+            font-family: Arial;
+            color: darkgreen;
+            text-align: center;
+        }
+        
+        section#res {
+            color: darkgreen;
+        }
+        
+        p#botao {
+            text-align: center;
+        }
+		
+		main {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 5px 5px 15px rgba(136, 109, 93, 0.616);
+			width: 300px;
+			padding: 10px;
+			margin: auto;
+		}
+    </style>
+</head>
+<body>
+	<main>
+		<h1>Conversor de Temperaturas</h1>
+		<p id='botao'><button onclick="clicou()">Converter</button></p>
+		<section id="res"><p>Clique no botão acima para iniciar</p></section>
+	</main>	
+    <script>
+        function clicou(){
+          let temp=  Number(window.prompt('Digite uma temperarura em ºC (Celsius): '))
+        
+        
+        let res = document.querySelector('section#res')
+ 
+         res.innerHTML = `<strong><p>A temperatura de ${temp} ºC corresponde a ...</p></strong>` 
+        res.innerHTML += `<p>${temp + 273.15} 'K (Kelvin)</p>`     
+
+        res.innerHTML += `<p>${((temp*9)/5)+32} 'F (Fahrenheit)</p>`
+        }
+    </script>
+</body>
+</html>

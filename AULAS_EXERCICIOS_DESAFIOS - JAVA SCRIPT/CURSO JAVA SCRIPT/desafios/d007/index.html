@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 7</title>
+    <style>
+        body {
+            background-color: #B7CF9D;
+        }
+        button {
+            color: white;
+            background-color: grey;
+            padding: 20px;
+            font-family: Arial;
+            border-bottom: black;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        h1 {
+            font-family: Arial;
+            color: darkgreen;
+            text-align: center;
+        }
+        
+        section#res {
+            color: darkgreen;
+        }
+        
+        p#botao {
+            text-align: center;
+        }
+		
+		main {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 5px 5px 15px rgba(136, 109, 93, 0.616);
+			width: 300px;
+			padding: 10px;
+			margin: auto;
+		}
+    </style>
+</head>
+<body>
+	<main>
+		<h1>Conversor de R$ para US$</h1>
+		<p id='botao'><button onclick="clicou()">Converter</button></p>
+		<section id="res"><p>Clique no botão acima para iniciar</p></section>
+	</main>
+    <script>
+        function clicou(){
+
+          let cot = Number(window.prompt('Antes de mais nada, quanto está a cotação do dólar agora?'))
+        
+          let valor =  Number(window.prompt('Quantos reais você tem na carteira? '))
+          
+          let resp = valor/cot
+          
+          let respD = resp.toLocaleString('pt-BR', {style: 'currency',currency:'USD'})
+        
+        let res = document.querySelector('section#res')
+ 
+         res.innerHTML = `<strong><p>Você tem ${respD} dólares hoje!</p></strong>`
+        }
+
+    </script>
+</body>
+</html>

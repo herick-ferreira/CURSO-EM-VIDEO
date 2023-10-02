@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 8</title>
+    <style>
+        body {
+            background-color: #B7CF9D;
+        }
+        button {
+            color: white;
+            background-color: grey;
+            padding: 20px;
+            font-family: Arial;
+            border-bottom: black;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        h1 {
+            font-family: Arial;
+            color: darkgreen;
+            text-align: center;
+        }
+        
+        section#res {
+            color: darkgreen;
+        }
+        
+        p#botao {
+            text-align: center;
+        }
+		
+		main {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 5px 5px 15px rgba(136, 109, 93, 0.616);
+			width: 300px;
+			padding: 10px;
+			margin: auto;
+		}
+    </style>
+</head>
+<body>
+	<main>
+		<h1>Calcular Desconto</h1>
+		<p id='botao'><button onclick="clicou()">Desconto de 10%</button></p>
+		<section id="res"><p>Clique no botão acima para iniciar.</p></section>
+	</main>
+    <script>
+        function clicou(){
+
+          let pro = String(window.prompt('Qual é o produto que você está comprando?'))
+        
+          let preco =  Number(window.prompt(`Qual é o preço do(a) ${pro}?`))
+          
+          let precoR= preco.toLocaleString('pt-BR', {style: 'currency',currency:'BRL'})
+          
+          let desc = preco*.10
+          
+          let descR = desc.toLocaleString('pt-BR', {style: 'currency',currency:'BRL'})
+          
+          let valorFinal = (preco - desc)
+          
+          let valorFinalR = valorFinal.toLocaleString('pt-BR', {style: 'currency',currency:'BRL'})
+          
+        
+        let res = document.querySelector('section#res')
+ 
+         res.innerHTML = `<strong>Calculando desconto de 10% para ${pro}</p></strong>`
+         
+         res.innerHTML += `O preço original era de ${precoR}.<br>`
+         
+         res.innerHTML += `Você acaba de ganhar ${descR} de desconto (-10%).<br>`
+         
+         res.innerHTML += `No fim você vai pagar ${valorFinalR} no produto ${pro}.`
+        }
+
+    </script>
+</body>
+</html>

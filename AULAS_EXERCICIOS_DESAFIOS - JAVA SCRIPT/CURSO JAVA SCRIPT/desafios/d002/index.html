@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2</title>
+    <style>
+        body {
+            background-color: #B7CF9D;
+        }
+        button {
+            color: white;
+            background-color: grey;
+            padding: 20px;
+            font-family: Arial;
+            border-bottom: black;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        h1 {
+            font-family: Arial;
+            color: darkgreen;
+            text-align: center;
+        }
+        
+        p {
+            text-align: center;
+        }
+		
+		main {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 5px 5px 15px rgba(136, 109, 93, 0.616);
+			width: 300px;
+			padding: 10px;
+			margin: auto;
+		}
+    </style>
+</head>
+<body>
+	<main>
+		<h1>Boas Vindas</h1>
+		<p><button onclick="clicou()">Inicie o Desafio</button></p>
+	</main>   
+    <script>
+        function clicou(){
+           let nome = window.prompt('Qual é o seu nome?')
+           let idade = window.prompt(`Olá, ${nome}! Quantos anos você tem?`)
+           window.alert(`Acabei de conhecer ${nome}, que tem ${idade} anos de idade!`)
+        }
+    </script>
+</body>
+</html>

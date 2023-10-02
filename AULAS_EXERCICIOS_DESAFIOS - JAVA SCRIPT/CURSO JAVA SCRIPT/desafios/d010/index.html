@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 10</title>
+    <style>
+        body {
+            background-color: #B7CF9D;
+        }
+        button {
+            color: white;
+            background-color: grey;
+            padding: 20px;
+            font-family: Arial;
+            border-bottom: black;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        h1 {
+            font-family: Arial;
+            color: darkgreen;
+            text-align: center;
+        }
+        
+        p#botao {
+            text-align: center;
+        }
+        
+        section {
+            color: darkgreen;
+        }
+		
+		main {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 5px 5px 15px rgba(136, 109, 93, 0.616);
+			width: 300px;
+			padding: 10px;
+			margin: auto;
+		}
+    </style>
+</head>
+<body>
+	<main>
+		<h1>Resolvendo Bhaskara</h1>
+		<p id="botao"><button onclick="clicou()">Calcular</button></p>
+		<section id="res"><p>Considerando uma equação no formato <strong>a</strong>x<sup>2</sup> + <strong>b</strong>x +<strong> c</strong> = 0, aperte o botão acima para calcular o valor de <strong>∆</strong>.</p></section>
+	</main>	
+    <script>
+        function clicou(){
+          let a = Number(window.prompt('Qual o valor de a ?'))
+          
+          let b = Number(window.prompt('Qual o valor de b ?'))
+          let c = Number(window.prompt('Qual o valor de c ?'))
+          
+          let resul = (b**2)-4*a*c
+          
+          res.innerHTML = '<h2>Resolvendo Bhaskara</h2>'
+          
+          res.innerHTML += `A equação atual é <strong>${a}x<sup>2</sup> + ${b}x + ${c} = 0</strong><br>`
+          
+          res.innerHTML += `O cálculo realizado será <strong>∆ = ${b}<sup>2</sup> - 4 . ${a} . ${c}</strong><br>`
+          
+          res.innerHTML += `O valor calculado foi <mark><strong>∆ = ${resul}</strong></mark>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+    <style>
+        body {
+            background-color: #B7CF9D;
+        }
+        button {
+            color: white;
+            background-color: grey;
+            padding: 20px;
+            font-family: Arial;
+            border-bottom: black;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        h1 {
+            font-family: Arial;
+            color: darkgreen;
+            text-align: center;
+        }
+        p#botao {
+            text-align: center;
+        }
+		
+		main {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 5px 5px 15px rgba(136, 109, 93, 0.616);
+			width: 300px;
+			padding: 10px;
+			margin: auto;
+		}
+    </style>
+</head>
+<body>
+	<main>
+		<h1>Antes e Depois</h1>
+		<p id="botao"><button onclick="clicou()">Antecessor e Sucessor</button></p>
+	</main>   
+    <script>
+        function clicou(){
+          let num = Number(window.prompt('Digite um número inteiro qualquer:'))
+          
+          window.alert(`Antes de ${num}, temos o número ${num-1}. Depois de ${num}, temos o número ${num+1}.`)
+        }
+    </script>
+</body>
+</html>

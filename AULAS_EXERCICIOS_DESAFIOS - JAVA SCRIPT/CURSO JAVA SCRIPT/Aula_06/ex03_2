@@ -1,0 +1,9 @@
+var s = 'JavaScript'
+s
+'Eu estou estudando '+s
+
+nome = 'Gustavo'
+idade = 41
+nota = 5.5
+'O aluno '+ nome +' com '+idade+' anos tirou a nota '+nota
+'O aluno ${nome} com ${idade} anos tirou a nota ${nota}'

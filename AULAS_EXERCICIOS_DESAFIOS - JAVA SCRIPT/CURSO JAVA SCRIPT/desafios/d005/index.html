@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 5</title>
+    <style>
+        body {
+            background-color: #B7CF9D;
+        }
+        button {
+            color: white;
+            background-color: grey;
+            padding: 20px;
+            font-family: Arial;
+            border-bottom: black;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        h1 {
+            font-family: Arial;
+            color: darkgreen;
+            text-align: center;
+        }
+        
+        section#res {
+            color: darkgreen;
+        }
+        
+        p#botao{
+            text-align: center;
+        }
+		
+		main {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 5px 5px 15px rgba(136, 109, 93, 0.616);
+			width: 300px;
+			padding: 10px;
+			margin: auto;
+		}
+    </style>
+</head>
+<body>
+	<main>
+		<h1>Conversor de Medidas</h1>
+		<p id='botao'><button onclick="clicou()">Converter</button></p>
+		<section id="res"><p>Clique no botão acima para iniciar</p></section>
+    </main>
+    <script>
+        function clicou(){
+          let val=  Number(window.prompt('Digite uma distância em metros(m): '))
+          
+        
+        
+        let res = document.querySelector('section#res')
+ 
+         res.innerHTML = `<strong><p>A distância de ${val} metros, corresponde a ...</p></strong>`
+         
+
+        res.innerHTML += `<p>${val/1000} quilômetros (Km) <br> ${val/100} hectômetros (Hm) <br> ${val/10} decâmetros (Dam) <br> ${val*10} decímetros (dm) <br> ${val*100} centímetros (cm) <br> ${val*1000} milímetros (mm) </p>`
+        }  
+        
+    </script>
+</body>
+</html>

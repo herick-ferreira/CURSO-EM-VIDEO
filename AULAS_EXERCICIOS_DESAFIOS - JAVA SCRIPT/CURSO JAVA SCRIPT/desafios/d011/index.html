@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 11</title>
+    <style>
+        body {
+            background-color: #B7CF9D;
+        }
+        button {
+            color: white;
+            background-color: grey;
+            padding: 20px;
+            font-family: Arial;
+            border-bottom: black;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        h1 {
+            font-family: Arial;
+            color: darkgreen;
+            text-align: center;
+        }
+        
+        p#botao {
+            text-align: center;
+        }
+        
+        section {
+            color: darkgreen;
+        }
+        
+        span.foco {
+            background-color:#81FF00;
+        }
+        
+        span.desfoco {
+            background-color: #D15C64;
+			color: #fff;
+        }
+		
+		main {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 5px 5px 15px rgba(136, 109, 93, 0.616);
+			width: 300px;
+			padding: 10px;
+			margin: auto;
+		}
+    </style>
+</head>
+<body>
+	<main>
+		<h1>Ano Bissexto</h1>
+		<p id="botao"><button onclick="clicou()">Verificar</button></p>
+		<section id="res"><p>Informe um ano para saber se ele é bissexto</p></section>
+	</main>	
+    <script>
+        function clicou(){
+          let ano = Number(window.prompt('Qual ano você quer verificar?'))
+          
+          res.innerHTML = `<h2><strong>Analisando o ano de ${ano}...</strong></h2>`
+          
+            if (ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0){
+                res.innerHTML += `O ano de ${ano} <span class='foco'>É BISSEXTO!️ ✔</span>`
+                } else {
+                    res.innerHTML += `O ano de ${ano} <span class='desfoco'>NÃO É BISSEXTO! ✖️</span>`
+                }
+        }
+    </script>
+</body>
+</html>

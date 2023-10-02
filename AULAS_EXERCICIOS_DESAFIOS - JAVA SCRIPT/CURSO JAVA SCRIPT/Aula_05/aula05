@@ -1,0 +1,13 @@
+var n = 200
+typeof n
+n = "Google"
+typeof n
+typeof 6
+typeof "6"
+typeof []
+typeof {}
+typeof function(){}
+typeof undefinid
+typeof NaN
+typeof Infinity
+typeof null

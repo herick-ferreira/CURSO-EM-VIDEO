@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 9</title>
+    <style>
+        body {
+            background-color: #B7CF9D;
+        }
+        button {
+            color: white;
+            background-color: grey;
+            padding: 20px;
+            font-family: Arial;
+            border-bottom: black;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        h1 {
+            font-family: Arial;
+            color: darkgreen;
+            text-align: center;
+        }
+        
+        section#res {
+            color: darkgreen;
+        }
+        
+        p#botao {
+            text-align: center;
+        }
+		
+		main {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 5px 5px 15px rgba(136, 109, 93, 0.616);
+			width: 300px;
+			padding: 10px;
+			margin: auto;
+		}
+    </style>
+</head>
+<body>
+	<main>
+		<h1>Reajuste Salarial</h1>
+		<p id='botao'><button onclick="clicou()">Reajustar Sálario</button></p>
+		<section id="res"><p>Clique no botão acima para iniciar.</p></section>
+	</main>	
+    <script>
+        function clicou(){
+
+          let f = String(window.prompt('Qual é o nome do funcionário?'))
+        
+          let salario =  Number(window.prompt(`Qual é o salário de ${f}?`))
+          
+          let salarioR = salario.toLocaleString('pt-BR', {style: 'currency',currency:'BRL'})
+          
+          let reajuste = Number(window.prompt(`O salário de ${f} vai ser reajustado em qual porcentagem?`))
+          
+          let totReajuste = (salario/100)*reajuste
+          
+          let totReajusteR = totReajuste.toLocaleString('pt-BR', {style: 'currency',currency:'BRL'})
+          
+          let valorFinal = totReajuste + salario
+          
+          let valorFinalR = valorFinal.toLocaleString('pt-BR', {style: 'currency',currency:'BRL'})
+          
+        
+        let res = document.querySelector('section#res')
+ 
+         res.innerHTML = `<strong>${f} recebeu um aumento salarial!</p></strong>`
+         
+         res.innerHTML += `O salário atual era de ${salarioR}.<br>`
+         
+         res.innerHTML += `Com um aumento de ${reajuste}%, o sálario vai aumentar ${totReajusteR} no próximo mês.<br>`
+         
+         res.innerHTML += `E apartir daí,  ${f} vai passar a ganhar ${valorFinalR}.`
+        }
+
+    </script>
+</body>
+</html>
